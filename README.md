@@ -1,4 +1,4 @@
-**brain surgery** is a replacement boot loader firmware for the *B* Brains eurorack module.
+**brain surgery** is a replacement boot loader firmware for the B* Brains eurorack module.
 
 **brain surgery** replaces the original bootloader in the CPU internal flash, it does not touch the actual module firmware which is stored in an SPI FLASH chip
 
