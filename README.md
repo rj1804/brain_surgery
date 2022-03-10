@@ -6,7 +6,7 @@
 
 in order to install **brain surgery** you need to completely wipe the internal FLASH and thus set the ROP (read out protection) bits in the option ROM back to "no protection"
 
-if needed the original FLASH boot loader can be re-installed (maybe make a copy before you erase it :wink:)
+if needed the original FLASH boot loader can be re-installed - maybe make a copy before you erase it :wink:
 
 ## **building**
 
@@ -23,7 +23,7 @@ if needed the original FLASH boot loader can be re-installed (maybe make a copy 
   - SWDIO
   - NRST
   - UART7 RX (it's RX, but it can be used as TX as well which is what we do) 
-- the makefile use OPENOCD (https://openocd.org/) but you could also use the official STM32CubeProgrammer (https://www.st.com/en/development-tools/stm32cubeprog.html)
+- the makefile uses OPENOCD (https://openocd.org/) but you could also use the official STM32CubeProgrammer (https://www.st.com/en/development-tools/stm32cubeprog.html)
 
 ## **erasing the original bootloader**
 - **NOTE: do this only if you know exactly what you are doing!!!**
@@ -47,3 +47,5 @@ if needed the original FLASH boot loader can be re-installed (maybe make a copy 
 ## **have fun!**
 
 proceed at your own risk, yet remember: the module is cheap, fun is invaluable
+
+**MAKE LOVE NOT WAR**
