@@ -2,6 +2,8 @@
 
 **brain surgery** is a replacement boot loader firmware for the B* ***BRAINS*** eurorack module.
 
+see it in action: https://twitter.com/tripo1804/status/1501535014583877636
+
 **brain surgery** replaces the original bootloader in the CPU internal FLASH memory, it does **NOT** touch the actual module firmware which is stored in an external SPI FLASH chip
 
 in order to install **brain surgery** you need to completely wipe the internal FLASH and thus set the ROP (read out protection) bits in the option ROM back to "no protection"
