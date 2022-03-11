@@ -46,6 +46,14 @@ if needed the original FLASH boot loader can be re-installed - maybe make a copy
 - if you are done with flashing, press the **right** button to start the firmware (or power cycle the module)
 - if you have STLINK v2.1 or V3 you can also read some serial debug logs on the USB UART, otherwise you need something like an FTDI USD to serial converter... (115200, 8n1)
 
+## **custom firmware**
+
+- the actual firmware is loaded from QSPI address 0x00 into AXI RAM at 0x24000000, there is a 16 byte header that contains the size, a checksum and some other values, the original bootloader makes sure the size is between 65k and 256k and compares the checksum. The replacement bootloader does the same, but you could of course remove that :wink:
+- when writing your own firmware, make sure the linker script is changed to place text and data into AXI RAM at 0x24000000 and also set VTOR correctly to place the vector table at 0x24000000
+- use ```make chksum``` to compile a tool that will take a binary file and calculate the correct header:
+  - ```./chksum <infile> <outfile>```
+- upload the new firmware using ```dd``` as explained above
+
 ## **have fun!**
 
 proceed at your own risk, yet remember: the module is cheap, fun is invaluable
