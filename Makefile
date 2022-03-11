@@ -306,6 +306,9 @@ check:
 	@echo "CHECK!"
 	-$(OOCD_EXE) $(OOCD_CHECK_CL)
 
+chksum: tools/chksum.c
+	gcc -o chksum tools/chksum.c
+
 erase: 
 	@echo "ERASE!"
 	@echo "WARNING! uncomment the next line in the Makefile to really do it!"
